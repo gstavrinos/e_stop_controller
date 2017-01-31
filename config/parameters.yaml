@@ -1,2 +1,3 @@
 imu_topic: '/imu/data'
 pitch_threshold: -1.16
+twist_topic: '/assisted_teleop/cmd_vel'
