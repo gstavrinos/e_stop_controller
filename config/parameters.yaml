@@ -1,0 +1,2 @@
+imu_topic: '/imu/data'
+pitch_threshold: -1.16
