@@ -26,7 +26,6 @@ def init():
     pitch_threshold = rospy.get_param('~pitch_threshold', -0.7)
     twist_topic = rospy.get_param('~twist_topic','/e_stop')
     rospy.Subscriber(imu_topic, Imu, imu_callback)
-    pitch_threshold = -0.7
     twist_publisher = rospy.Publisher(twist_topic, Twist, queue_size=10);
     rospy.spin()
 
