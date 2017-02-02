@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<launch>
+	<master auto="start"/>
+
+	<node pkg="e_stop_controller" type="estop.py" respawn="false" name="e_stop_controller" output="screen">
+		<rosparam file="$(find e_stop_controller)/config/parameters.yaml" command="load" />
+	</node>
+</launch>

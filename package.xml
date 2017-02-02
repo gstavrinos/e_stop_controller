@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>assisted_teleoperation</name>
+  <name>e_stop_controller</name>
   <version>0.0.0</version>
-  <description>The assisted_teleoperation package</description>
+  <description>The e_stop_controller package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/assisted_teleoperation</url> -->
+  <!-- <url type="website">http://wiki.ros.org/e_stop_controller</url> -->
 
 
   <!-- Author tags are optional, mutiple are allowed, one per tag -->

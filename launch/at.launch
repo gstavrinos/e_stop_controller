@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<launch>
-	<master auto="start"/>
-
-	<node pkg="assisted_teleoperation" type="a_t.py" respawn="false" name="assisted_teleoperation" output="screen">
-		<rosparam file="$(find assisted_teleoperation)/config/parameters.yaml" command="load" />
-	</node>
-</launch>
