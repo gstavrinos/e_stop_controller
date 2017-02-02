@@ -21,10 +21,10 @@ def imu_callback(msg):
 
 def init():
     global pitch_threshold, twist_publisher
-    rospy.init_node('e_stop_controller')
+    rospy.init_node('safety_controller')
     imu_topic = rospy.get_param('~imu_topic','/imu/data')
     pitch_threshold = rospy.get_param('~pitch_threshold', -0.7)
-    twist_topic = rospy.get_param('~twist_topic','/e_stop')
+    twist_topic = rospy.get_param('~twist_topic','/safety_controller/cmd_vel')
     rospy.Subscriber(imu_topic, Imu, imu_callback)
     twist_publisher = rospy.Publisher(twist_topic, Twist, queue_size=10);
     rospy.spin()
