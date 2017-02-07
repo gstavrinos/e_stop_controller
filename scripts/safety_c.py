@@ -10,14 +10,14 @@ twist_publisher = None
 def imu_callback(msg):
     global pitch_threshold, twist_publisher, cnt
     (roll, pitch, yaw) = tf.transformations.euler_from_quaternion([msg.orientation.x, msg.orientation.y, msg.orientation.z, msg.orientation.w])
-    #print "PITCH = " + str(pitch)
     if pitch < -abs(pitch_threshold) or pitch > abs(pitch_threshold):
-        #print 'D A N G E R ! ! !'
-        twist_publisher.publish(Twist())
-    '''
-    else:
-        print 'SAFE :)'
-    '''
+        twist = Twist()
+	if pitch < -abs(pitch_threshold) - 0.05:
+            twist.linear.x = -0.15
+            print 'GO BACK!'
+        elif pitch > abs(pitch_threshold) + 0.05:
+            twist.linear.x = 0.15
+        twist_publisher.publish(twist)
 
 def init():
     global pitch_threshold, twist_publisher
