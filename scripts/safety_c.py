@@ -14,7 +14,6 @@ def imu_callback(msg):
         twist = Twist()
 	if pitch < -abs(pitch_threshold) - 0.05:
             twist.linear.x = -0.15
-            print 'GO BACK!'
         elif pitch > abs(pitch_threshold) + 0.05:
             twist.linear.x = 0.15
         twist_publisher.publish(twist)
